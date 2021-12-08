@@ -14,7 +14,6 @@ function TeamList(){
       setIsLoading(false);
     }
     equipos();
-
   }, []);
   
   if (isLoading) return <h1>Loading Information</h1>;
