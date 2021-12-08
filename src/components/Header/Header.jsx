@@ -7,10 +7,10 @@ function Header(){
       <NavLink className='navLinks' activeClassName='colorClick' to='/' exact>
         <p>Home</p> 
       </NavLink>
-      <NavLink className='navLinks' to='/teams' exact>
+      <NavLink className='navLinks' activeClassName='colorClick' to='/teams' exact>
         <p>Teams</p>
       </NavLink>
-      <NavLink className='navLinks' to='/players'>
+      <NavLink className='navLinks' activeClassName='colorClick' to='/players'>
         <p>Player</p>
       </NavLink>
      

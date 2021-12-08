@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 import { getTeamById } from '../../services/teams';
 
-function TeamInfo(){
-  const { idOfTeam } = useParams();
+function TeamInfo({ match }){
+  const { idOfTeam } = match.params;
   const [team, setTeam] = useState();
   const [isLoading, setIsLoading] = useState(true);
 

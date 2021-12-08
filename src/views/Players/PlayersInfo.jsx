@@ -1,9 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
 import { getPlayerById } from '../../services/players';
 
-function PlayerInfo(){
-  const { playerId } = useParams();
+function PlayerInfo({ match }){
+  const { playerId } = match.params;
   const [player, setPlayer] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
