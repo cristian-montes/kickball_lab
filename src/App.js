@@ -1,13 +1,30 @@
-// import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './views/Home/Home';
 import TeamList from './views/Teams/Team.List';
+import TeamInfo from './views/Teams/TeamInfo';
 
 function App() {
   return (
     <div className="App-header">
-      <Home />
-      <TeamList />
+      <Router>
+        <Switch>
+          <Route 
+            path='/' exact component={Home}
+          />
+          <Route 
+            path='/teams' 
+            exact 
+            render={(routerProps) =>(<TeamList {...routerProps} />)}
+          />
+          <Route 
+            path='/teams/:idOfTeam' 
+            exact 
+            render={(routerProps) =>(<TeamInfo {...routerProps} />)}
+          />
+          
+        </Switch>
+      </Router>
     </div>
   );
 }

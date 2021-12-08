@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { getTeams } from '../../services/teams';
 
 
@@ -21,7 +22,9 @@ function TeamList(){
         {teams.map((team) => {
           return (
             <li key={team.id}>
-              {team.name}
+              <Link to={`/teams/${team.id}`} > 
+                {team.name} 
+              </Link>
             </li>
           );
         })}
