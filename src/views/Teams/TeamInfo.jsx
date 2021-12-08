@@ -26,7 +26,7 @@ function TeamInfo(){
         {team.players.map((player) => {
           return (
             <li key={player.id}>
-              {player.position} - {player.name};
+              <p> Position - {player.position}, Name - {player.name}</p>
             </li>  
           );
         })}
