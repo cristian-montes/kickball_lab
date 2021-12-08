@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render the header with navLinks 1`] = `
+<div>
+  <div
+    class="header"
+  >
+    <a
+      aria-current="page"
+      class="navLinks colorClick"
+      href="/"
+    >
+      <p>
+        Home
+      </p>
+    </a>
+    <a
+      class="navLinks"
+      href="/teams"
+    >
+      <p>
+        Teams
+      </p>
+    </a>
+    <a
+      class="navLinks"
+      href="/players"
+    >
+      <p>
+        Player
+      </p>
+    </a>
+  </div>
+</div>
+`;
