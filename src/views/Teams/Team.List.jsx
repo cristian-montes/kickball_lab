@@ -16,7 +16,16 @@ function TeamList(){
 
   }, []);
 
-  return (<h1> Team List </h1>);
+  return (
+    <div>
+      <h1> Team List </h1>
+      <ul>
+          {teams.map((team) => {
+              
+          })}
+      </ul>
+    </div>
+  );
 }
 
 export default TeamList;
