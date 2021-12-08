@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { getPlayers } from '../../services/players';
 
 function PlayerList(){
-  const [players, setPlayers] = useState();
+  const [players, setPlayers] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -13,7 +13,7 @@ function PlayerList(){
       setIsLoading(false);
     }
     jugadores();
-  });
+  }, []);
 
   if (isLoading) return <h1>Loading Information</h1>;
   return (

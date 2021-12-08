@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Home from './views/Home/Home';
+import PlayerInfo from './views/Players/PlayersInfo';
 import PlayerList from './views/Players/PlayersList';
 import TeamList from './views/Teams/Team.List';
 import TeamInfo from './views/Teams/TeamInfo';
@@ -27,6 +28,11 @@ function App() {
             path='/players' 
             exact 
             render={(routerProps) =>(<PlayerList {...routerProps} />)}
+          />
+          <Route 
+            path='/players/:playerId' 
+            exact 
+            render={(routerProps) =>(<PlayerInfo {...routerProps} />)}
           />
         </Switch>
       </Router>
