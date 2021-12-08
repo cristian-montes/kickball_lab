@@ -5,7 +5,7 @@ import { getTeams } from '../../services/teams';
 function TeamList(){
   const [teams, setTeams] = useState([]);
 
-  console.log('here', teams);
+  //  console.log('here', teams);
 
   useEffect(() => {
     async function equipos(){
@@ -20,9 +20,13 @@ function TeamList(){
     <div>
       <h1> Team List </h1>
       <ul>
-          {teams.map((team) => {
-              
-          })}
+        {teams.map((team) => {
+          return (
+            <li key={team.id}>
+              {team.name}
+            </li>
+          );
+        })}
       </ul>
     </div>
   );
