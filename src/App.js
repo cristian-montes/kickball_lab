@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
 import Home from './views/Home/Home';
 import PlayerInfo from './views/Players/PlayersInfo';
 import PlayerList from './views/Players/PlayersList';
@@ -8,33 +9,36 @@ import TeamInfo from './views/Teams/TeamInfo';
 
 function App() {
   return (
-    <div className="App-header">
+    <div className="App">
       <Router>
-        <Switch>
-          <Route 
-            path='/' exact component={Home}
-          />
-          <Route 
-            path='/teams' 
-            exact 
-            render={(routerProps) =>(<TeamList {...routerProps} />)}
-          />
-          <Route 
-            path='/teams/:idOfTeam' 
-            exact 
-            render={(routerProps) =>(<TeamInfo {...routerProps} />)}
-          />
-          <Route 
-            path='/players' 
-            exact 
-            render={(routerProps) =>(<PlayerList {...routerProps} />)}
-          />
-          <Route 
-            path='/players/:playerId' 
-            exact 
-            render={(routerProps) =>(<PlayerInfo {...routerProps} />)}
-          />
-        </Switch>
+        <Header />
+        <div className="App">
+          <Switch>
+            <Route 
+              path='/' exact component={Home}
+            />
+            <Route 
+              path='/teams' 
+              exact 
+              render={(routerProps) =>(<TeamList {...routerProps} />)}
+            />
+            <Route 
+              path='/teams/:idOfTeam' 
+              exact 
+              render={(routerProps) =>(<TeamInfo {...routerProps} />)}
+            />
+            <Route 
+              path='/players' 
+              exact 
+              render={(routerProps) =>(<PlayerList {...routerProps} />)}
+            />
+            <Route 
+              path='/players/:playerId' 
+              exact 
+              render={(routerProps) =>(<PlayerInfo {...routerProps} />)}
+            />
+          </Switch>
+        </div>
       </Router>
     </div>
   );
