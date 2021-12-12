@@ -1,0 +1,14 @@
+.header{
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.navLinks{
+    margin: 5px;
+    color:aqua
+}
+
+.colorClick{
+    color:red
+}
