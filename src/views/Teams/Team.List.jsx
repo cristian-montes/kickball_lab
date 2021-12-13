@@ -20,10 +20,10 @@ function TeamList(){
   return (
     <div>
       <h1> Team List </h1>
-      {/* <Link to={'/teams/new'} className="App-link">
+      <Link to={'/newTeam'} exact className="App-link">
         Add a Team
-      </Link> */}
-      <AddTeam />
+      </Link>
+      {/* <AddTeam /> */}
       <ul>
         {teams.map((team) => {
           return (

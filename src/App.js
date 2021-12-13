@@ -29,7 +29,7 @@ function App() {
               render={(routerProps) =>(<TeamInfo {...routerProps} />)}
             />
 
-            <Route path='/teams/new' exact component={AddTeam} />
+            <Route path='/newTeam' exact component={AddTeam} />
 
             <Route 
               path='/players' 
