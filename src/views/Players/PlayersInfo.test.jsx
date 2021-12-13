@@ -11,7 +11,7 @@ it('should render a detail view of a player', async () => {
     </MemoryRouter>
   );
 
-  const playerName = await screen.findByText('Bennie Jetts', { exact: false });
+  const playerName = await screen.findByText('Pollito', { exact: false });
 
   expect(playerName).toBeInTheDocument();
 });

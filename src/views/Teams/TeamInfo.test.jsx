@@ -11,7 +11,7 @@ it('should render a detail view of a team', async ()=>{
     </MemoryRouter>
   );
 
-  const teamName = await screen.findByText('Bridge City Sneakers', { exact: false });
+  const teamName = await screen.findByText('Pollos Locos', { exact: false });
 
   expect(teamName).toBeInTheDocument();
 });
