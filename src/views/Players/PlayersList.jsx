@@ -19,6 +19,9 @@ function PlayerList(){
   return (
     <div>
       <h1> The Players List </h1>
+      <Link to={'/newPlayer'} className="App-link">
+        Add Player
+      </Link>
       <ul>
         {players.map((player) => {
           return (
