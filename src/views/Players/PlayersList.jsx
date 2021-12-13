@@ -39,11 +39,11 @@ function PlayerList(){
               <Link to={`/players/${player.id}`} > 
                 {player.name} 
               </Link>
-              {/* <Link to={`/players/update/${player.id}`}>
+              <Link to={`/players/update/${player.id}`}>
                 <button>
                   update
                 </button>
-              </Link> */}
+              </Link>
             
               <button
                 type="button"
