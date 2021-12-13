@@ -6,6 +6,7 @@ import PlayerInfo from './views/Players/PlayersInfo';
 import PlayerList from './views/Players/PlayersList';
 import TeamList from './views/Teams/Team.List';
 import TeamInfo from './views/Teams/TeamInfo';
+import AddTeam from './views/Teams/AddTeam';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
               exact 
               render={(routerProps) =>(<TeamInfo {...routerProps} />)}
             />
+
+            <Route path='/teams/new' exact component={AddTeam} />
+
             <Route 
               path='/players' 
               exact 
@@ -37,6 +41,8 @@ function App() {
               exact 
               render={(routerProps) =>(<PlayerInfo {...routerProps} />)}
             />
+
+
           </Switch>
         </div>
       </Router>

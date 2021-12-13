@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { getTeams } from '../../services/teams';
+import AddTeam from './AddTeam';
 
 
 function TeamList(){
   const [teams, setTeams] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-
   useEffect(() => {
     async function equipos(){
       const teamsData = await getTeams();
@@ -20,6 +20,10 @@ function TeamList(){
   return (
     <div>
       <h1> Team List </h1>
+      {/* <Link to={'/teams/new'} className="App-link">
+        Add a Team
+      </Link> */}
+      <AddTeam />
       <ul>
         {teams.map((team) => {
           return (
