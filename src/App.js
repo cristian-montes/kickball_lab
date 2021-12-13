@@ -7,6 +7,7 @@ import PlayerList from './views/Players/PlayersList';
 import TeamList from './views/Teams/Team.List';
 import TeamInfo from './views/Teams/TeamInfo';
 import AddTeam from './views/Teams/AddTeam';
+import UpdateTeam from './views/Teams/UpdateTeam';
 
 function App() {
   return (
@@ -30,6 +31,12 @@ function App() {
             />
 
             <Route path='/newTeam' exact component={AddTeam} />
+            
+            <Route 
+              path='/teams/update/:idOfTeam' 
+              exact
+              render={(routerProps)=> (<UpdateTeam {...routerProps} />)}
+            />
 
             <Route 
               path='/players' 
